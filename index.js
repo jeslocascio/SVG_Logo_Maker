@@ -1,7 +1,9 @@
+// Import required libraries and modules
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { Circle, Triangle, Square } = require("./lib/shapes");
 
+// Create an array of questions for the user to answer
 const questions = [
     {
         type: "input",
@@ -52,6 +54,7 @@ const questions = [
 
 ];
 
+// Defines a function to generate a logo based on user input
 const generateLogo = ({ text, textColor, shape, shapeColor }) => {
     let shapeChoice;
     switch (shape) {
@@ -83,6 +86,7 @@ const generateLogo = ({ text, textColor, shape, shapeColor }) => {
         textColor = textColor;
     }
 
+    // Generates the logo content
     const svgContent = `
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
             ${shapeChoice.render()}
@@ -90,10 +94,12 @@ const generateLogo = ({ text, textColor, shape, shapeColor }) => {
         </svg>
     `;
 
+    // Writes the SVG content to a file named "logo.svg"
     fs.writeFileSync("logo.svg", svgContent);
     console.log("Generated logo.svg");
 };
 
+// Defines an initialization function
 const init = () => {
     inquirer
         .prompt(questions)
@@ -106,5 +112,6 @@ const init = () => {
         });
 };
 
+// Calls the initialization function to start the program
 init();
 
