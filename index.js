@@ -20,7 +20,7 @@ const questions = [
         name: "textColor",
         message: "Enter text color (name or hex code): ",
         validate: function (textColor) {
-            if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(textColor) || /^(red|blue|green|orange|purple|...)$/i.test(textColor)) {
+            if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(textColor) || /^(red|yellow|orange|green|blue|purple|...)$/i.test(textColor)) {
                 return true;
             }
             console.log("Please enter a valid color name or hex code.");
@@ -40,7 +40,7 @@ const questions = [
         name: "shapeColor",
         message: "Enter shape color (name or hex code): ",
         validate: function (shapeColor) {
-            if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(shapeColor) || /^(red|blue|green|orange|purple|...)$/i.test(shapeColor)) {
+            if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(shapeColor) || /^(red|yellow|orange|green|blue|purple|...)$/i.test(shapeColor)) {
                 return true;
             }
             console.log("Please enter a valid color name or hex code.");
