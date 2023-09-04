@@ -35,7 +35,7 @@
   
   ## Contribution
   
-Rutgers Fullstack Flex Coding Bootcamp provided the starter code
+N/A
 
   ## Tests
   
